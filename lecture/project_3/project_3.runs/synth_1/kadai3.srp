@@ -1,0 +1,321 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: kadai3.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "kadai3.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx16csg324-3
+Output File Name                   : "kadai3.ngc"
+
+---- Source Options
+Top Module Name                    : kadai3
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/VHDL/project_3/project_3.srcs/sources_1/imports/new/kadai3.vhd" into library work
+Parsing entity <kadai3>.
+Parsing architecture <Behavioral> of entity <kadai3>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <kadai3> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:/VHDL/project_3/project_3.srcs/sources_1/imports/new/kadai3.vhd" Line 46: Using initial value "0000000000000000000000001" for count_a since it is never assigned
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <kadai3>.
+    Related source file is "C:/VHDL/project_3/project_3.srcs/sources_1/imports/new/kadai3.vhd".
+    Found 1-bit register for signal <LD0>.
+    Found 1-bit register for signal <STATE>.
+    Found 25-bit register for signal <COUNT>.
+    Found 25-bit adder for signal <COUNT[24]_GND_4_o_add_0_OUT> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <kadai3> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 25-bit adder                                          : 1
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 25-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <kadai3>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <kadai3> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 25-bit adder                                          : 1
+# Counters                                             : 1
+ 25-bit up counter                                     : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <kadai3> ...
+WARNING:Xst:1293 - FF/Latch <COUNT_24> has a constant value of 0 in block <kadai3>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block kadai3, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : kadai3.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 178
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 46
+#      LUT2                        : 25
+#      LUT3                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 5
+#      MUXCY                       : 47
+#      VCC                         : 1
+#      XORCY                       : 49
+# FlipFlops/Latches                : 26
+#      FD                          : 26
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              26  out of  18224     0%  
+ Number of Slice LUTs:                   80  out of   9112     0%  
+    Number used as Logic:                80  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     80
+   Number with an unused Flip Flop:      54  out of     80    67%  
+   Number with an unused LUT:             0  out of     80     0%  
+   Number of fully used LUT-FF pairs:    26  out of     80    32%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    232     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_SRC                            | BUFGP                  | 26    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.215ns (Maximum Frequency: 191.738MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_SRC'
+  Clock period: 5.215ns (frequency: 191.738MHz)
+  Total number of paths / destination ports: 8727 / 26
+-------------------------------------------------------------------------
+Delay:               5.215ns (Levels of Logic = 14)
+  Source:            COUNT_0 (FF)
+  Destination:       COUNT_0 (FF)
+  Source Clock:      CLK_SRC rising
+  Destination Clock: CLK_SRC rising
+
+  Data Path: COUNT_0 to COUNT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  COUNT_0 (COUNT_0)
+     INV:I->O              1   0.206   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_lut<0>_INV_0 (Madd_COUNT[24]_GND_4_o_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<0> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<1> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<2> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<3> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<4> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<5> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<6> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<7> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<8> (Madd_COUNT[24]_GND_4_o_add_0_OUT_cy<8>)
+     XORCY:CI->O           1   0.180   0.924  Madd_COUNT[24]_GND_4_o_add_0_OUT_xor<9> (COUNT[24]_GND_4_o_add_0_OUT<9>)
+     LUT6:I1->O            2   0.203   0.845  GND_4_o_COUNT[24]_equal_2_o<24>2 (GND_4_o_COUNT[24]_equal_2_o<24>1)
+     LUT6:I3->O           14   0.205   0.958  GND_4_o_COUNT[24]_equal_2_o<24>6 (GND_4_o_COUNT[24]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  COUNT_0_rstpot (COUNT_0_rstpot)
+     FD:D                      0.102          COUNT_0
+    ----------------------------------------
+    Total                      5.215ns (1.872ns logic, 3.343ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_SRC'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            LD0 (FF)
+  Destination:       LD0 (PAD)
+  Source Clock:      CLK_SRC rising
+
+  Data Path: LD0 to LD0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  LD0 (LD0_OBUF)
+     OBUF:I->O                 2.571          LD0_OBUF (LD0)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_SRC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_SRC        |    5.215|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.18 secs
+ 
+--> 
+
+Total memory usage is 313048 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

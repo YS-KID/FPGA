@@ -1,0 +1,384 @@
+
+*** Running xst
+    with args -ifn "kadai7.xst" -ofn "kadai7.srp" -intstyle ise
+
+Reading design: kadai7.prj
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai3.vhd" into library work
+Parsing entity <kadai3>.
+Parsing architecture <Behavioral> of entity <kadai3>.
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai2.vhd" into library work
+Parsing entity <kadai2>.
+Parsing architecture <Behavioral> of entity <kadai2>.
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" into library work
+Parsing entity <kadai4>.
+Parsing architecture <Behavioral> of entity <kadai4>.
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" into library work
+Parsing entity <kadai7>.
+Parsing architecture <Behavioral> of entity <kadai7>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <kadai7> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <kadai4> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <kadai3> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai3.vhd" Line 46: Using initial value "0000000000000000000000001" for count_a since it is never assigned
+
+Elaborating entity <kadai2> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai2.vhd" Line 62. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:871 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 65: Using initial value "01" for count_a since it is never assigned
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 74. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 81. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 108. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" Line 156: sw should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" Line 153: Net <TIME_H_D[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" Line 154: Net <TIME_H_U[3]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <kadai7>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd".
+WARNING:Xst:647 - Input <BTN<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SW<5:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'TIME_H_D', unconnected in block 'kadai7', is tied to its initial value (0100).
+WARNING:Xst:2935 - Signal 'TIME_H_U', unconnected in block 'kadai7', is tied to its initial value (0001).
+    Found 24-bit register for signal <_v28>.
+    Found 1-bit register for signal <CLK_10HZ>.
+    Found 19-bit register for signal <COUNT>.
+    Found 1-bit register for signal <CLK_100HZ>.
+    Found 1-bit register for signal <BTNR_STATE>.
+    Found 4-bit register for signal <COUNT_A>.
+    Found 4-bit register for signal <COUNT_B>.
+    Found 4-bit register for signal <COUNT_C>.
+    Found 4-bit register for signal <COUNT_D>.
+    Found 4-bit register for signal <COUNT_E>.
+    Found 16-bit register for signal <COUNT_E[3]_dff_56_OUT>.
+    Found 4-bit register for signal <GND_4_o_dff_57_OUT>.
+    Found 7-bit register for signal <TIME_COUNT>.
+    Found 4-bit register for signal <TIME_SEC_D>.
+    Found 4-bit register for signal <TIME_SEC_U>.
+    Found 4-bit register for signal <TIME_MIN_D>.
+    Found 4-bit register for signal <TIME_MIN_U>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<15>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<14>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<13>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<12>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<11>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<10>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<9>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<8>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<7>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<6>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<5>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<4>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<3>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<2>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<1>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<0>>.
+    Found 1-bit register for signal <DOT_SEL<3>>.
+    Found 1-bit register for signal <DOT_SEL<2>>.
+    Found 1-bit register for signal <DOT_SEL<1>>.
+    Found 1-bit register for signal <DOT_SEL<0>>.
+    Found 24-bit adder for signal <COUNT[23]_GND_4_o_add_4_OUT> created at line 1241.
+    Found 19-bit adder for signal <COUNT[18]_GND_4_o_add_9_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_A[3]_GND_4_o_add_19_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_B[3]_GND_4_o_add_21_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_C[3]_GND_4_o_add_23_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_D[3]_GND_4_o_add_25_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_E[3]_GND_4_o_add_27_OUT> created at line 1241.
+    Found 7-bit adder for signal <TIME_COUNT[6]_GND_4_o_add_58_OUT> created at line 1241.
+    Found 4-bit adder for signal <TIME_SEC_D[3]_GND_4_o_add_60_OUT> created at line 1241.
+    Found 4-bit adder for signal <TIME_SEC_U[3]_GND_4_o_add_62_OUT> created at line 1241.
+    Found 4-bit adder for signal <TIME_MIN_D[3]_GND_4_o_add_64_OUT> created at line 1241.
+    Summary:
+	inferred  11 Adder/Subtractor(s).
+	inferred 129 D-type flip-flop(s).
+	inferred  40 Multiplexer(s).
+Unit <kadai7> synthesized.
+
+Synthesizing Unit <kadai4>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd".
+    Found 4-bit register for signal <SEG_SEL>.
+    Found 4-bit register for signal <SEG_l>.
+    Found 1-bit register for signal <SEG_DP>.
+    Found 2-bit register for signal <COUNT>.
+    Found 2-bit adder for signal <COUNT[1]_GND_5_o_add_0_OUT> created at line 68.
+    Found 4x4-bit Read Only RAM for signal <COUNT[1]_PWR_5_o_wide_mux_1_OUT>
+    Found 4-bit 4-to-1 multiplexer for signal <COUNT[1]_SEVENSEG_DATA_l[3]_wide_mux_2_OUT> created at line 76.
+    Found 1-bit 4-to-1 multiplexer for signal <COUNT[1]_DOT_SEL[0]_Mux_3_o> created at line 83.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <kadai4> synthesized.
+
+Synthesizing Unit <kadai3>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai3.vhd".
+    Found 1-bit register for signal <CLK_OUT_kadai3>.
+    Found 1-bit register for signal <STATE>.
+    Found 25-bit register for signal <COUNT>.
+    Found 25-bit adder for signal <COUNT[24]_GND_6_o_add_0_OUT> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <kadai3> synthesized.
+
+Synthesizing Unit <kadai2>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai2.vhd".
+    Found 16x7-bit Read Only RAM for signal <SEG_DATA_kadai2>
+    Summary:
+	inferred   1 RAM(s).
+Unit <kadai2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 13
+ 19-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 7-bit adder                                           : 1
+# Registers                                            : 44
+ 1-bit register                                        : 26
+ 16-bit register                                       : 1
+ 19-bit register                                       : 1
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 25-bit register                                       : 1
+ 4-bit register                                        : 12
+ 7-bit register                                        : 1
+# Multiplexers                                         : 42
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 38
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <kadai2>.
+INFO:Xst:3231 - The small RAM <Mram_SEG_DATA_kadai2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <SW_kadai2>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <SEG_DATA_kadai2> |          |
+    -----------------------------------------------------------------------
+Unit <kadai2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <kadai3>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <kadai3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <kadai4>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+INFO:Xst:3231 - The small RAM <Mram_COUNT[1]_PWR_5_o_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <COUNT[1]_GND_5_o_add_0_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <kadai4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <kadai7>.
+The following registers are absorbed into counter <_i000014>: 1 register on signal <_i000014>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+The following registers are absorbed into counter <TIME_COUNT>: 1 register on signal <TIME_COUNT>.
+Unit <kadai7> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 13
+ 19-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 7-bit adder                                           : 1
+# Counters                                             : 5
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 24-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 90
+ Flip-Flops                                            : 90
+# Multiplexers                                         : 45
+ 1-bit 2-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 37
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <_i000090_0> (without init value) has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_i000090_3> (without init value) has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DOT_SEL_3> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DOT_SEL_0> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    SEVENSEG_DATA_l_0 in unit <kadai7>
+    SEVENSEG_DATA_l_1 in unit <kadai7>
+    SEVENSEG_DATA_l_3 in unit <kadai7>
+    SEVENSEG_DATA_l_4 in unit <kadai7>
+    SEVENSEG_DATA_l_2 in unit <kadai7>
+    SEVENSEG_DATA_l_6 in unit <kadai7>
+    SEVENSEG_DATA_l_7 in unit <kadai7>
+    SEVENSEG_DATA_l_5 in unit <kadai7>
+    SEVENSEG_DATA_l_8 in unit <kadai7>
+    SEVENSEG_DATA_l_9 in unit <kadai7>
+    SEVENSEG_DATA_l_11 in unit <kadai7>
+    SEVENSEG_DATA_l_12 in unit <kadai7>
+    SEVENSEG_DATA_l_10 in unit <kadai7>
+    SEVENSEG_DATA_l_14 in unit <kadai7>
+    SEVENSEG_DATA_l_15 in unit <kadai7>
+    SEVENSEG_DATA_l_13 in unit <kadai7>
+    DOT_SEL_1 in unit <kadai7>
+    DOT_SEL_2 in unit <kadai7>
+
+
+Optimizing unit <kadai7> ...
+WARNING:Xst:1293 - FF/Latch <TIME_MIN_U_1> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <TIME_MIN_U_2> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <TIME_MIN_U_3> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <kadai4> ...
+WARNING:Xst:1293 - FF/Latch <TIME_SEC_U_3> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:3203 - The FF/Latch <_i000090_1> in Unit <kadai7> is the opposite to the following FF/Latch, which will be removed : <_i000090_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block kadai7, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 171
+ Flip-Flops                                            : 171
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Clock Information:
+------------------
+-------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                           | Clock buffer(FF name)          | Load  |
+-------------------------------------------------------+--------------------------------+-------+
+CLK_10HZ                                               | NONE(BTNR_STATE)               | 1     |
+CLK_100HZ                                              | BUFG                           | 87    |
+CLK_SRC                                                | BUFGP                          | 72    |
+SW[7]_GND_4_o_AND_50_o(SW[7]_GND_4_o_AND_50_o1:O)      | NONE(*)(DOT_SEL_2_LDC)         | 1     |
+SW[7]_GND_4_o_AND_48_o(SW[7]_GND_4_o_AND_48_o1:O)      | NONE(*)(DOT_SEL_1_LDC)         | 1     |
+SW[7]_COUNT_E[3]_AND_17_o(SW[7]_COUNT_E[3]_AND_17_o1:O)| NONE(*)(SEVENSEG_DATA_l_13_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_13_o(SW[7]_COUNT_E[3]_AND_13_o1:O)| NONE(*)(SEVENSEG_DATA_l_15_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_15_o(SW[7]_COUNT_E[3]_AND_15_o1:O)| NONE(*)(SEVENSEG_DATA_l_14_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_23_o(SW[7]_COUNT_E[3]_AND_23_o1:O)| NONE(*)(SEVENSEG_DATA_l_10_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_19_o(SW[7]_COUNT_E[3]_AND_19_o1:O)| NONE(*)(SEVENSEG_DATA_l_12_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_21_o(SW[7]_COUNT_E[3]_AND_21_o1:O)| NONE(*)(SEVENSEG_DATA_l_11_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_25_o(SW[7]_COUNT_E[3]_AND_25_o1:O)| NONE(*)(SEVENSEG_DATA_l_9_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_28_o(SW[7]_COUNT_E[3]_AND_28_o1:O)| NONE(*)(SEVENSEG_DATA_l_8_LDC1)| 1     |
+SW[7]_COUNT_E[3]_AND_34_o(SW[7]_COUNT_E[3]_AND_34_o1:O)| NONE(*)(SEVENSEG_DATA_l_5_LDC1)| 1     |
+SW[7]_COUNT_E[3]_AND_29_o(SW[7]_COUNT_E[3]_AND_29_o1:O)| NONE(*)(SEVENSEG_DATA_l_7_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_31_o(SW[7]_COUNT_E[3]_AND_31_o1:O)| NONE(*)(SEVENSEG_DATA_l_6_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_39_o(SW[7]_COUNT_E[3]_AND_39_o1:O)| NONE(*)(SEVENSEG_DATA_l_2_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_35_o(SW[7]_COUNT_E[3]_AND_35_o1:O)| NONE(*)(SEVENSEG_DATA_l_4_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_37_o(SW[7]_COUNT_E[3]_AND_37_o1:O)| NONE(*)(SEVENSEG_DATA_l_3_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_42_o(SW[7]_COUNT_E[3]_AND_42_o1:O)| NONE(*)(SEVENSEG_DATA_l_1_LDC1)| 1     |
+SW[7]_COUNT_E[3]_AND_44_o(SW[7]_COUNT_E[3]_AND_44_o1:O)| NONE(*)(SEVENSEG_DATA_l_0_LDC1)| 1     |
+UA/U1/CLK_OUT_kadai3                                   | NONE(UA/COUNT_1)               | 11    |
+-------------------------------------------------------+--------------------------------+-------+
+(*) These 18 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.244ns (Maximum Frequency: 190.701MHz)
+   Minimum input arrival time before clock: 6.500ns
+   Maximum output required time after clock: 4.821ns
+   Maximum combinational path delay: No path found
+
+=========================================================================

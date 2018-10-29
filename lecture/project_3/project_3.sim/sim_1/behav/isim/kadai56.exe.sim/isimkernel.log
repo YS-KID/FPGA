@@ -1,0 +1,29 @@
+Command line:
+   kadai56.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52890
+
+Thu Oct 25 14:16:02 2018
+
+
+ Elaboration Time: 0.046801 sec
+
+ Current Memory Usage: 1145.98 Meg
+
+ Total Signals          : 4
+ Total Nets             : 2
+ Total Signal Drivers   : 2
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 2
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 486
+Total Line Count : 10
+
+ Total Simulation Time: 0.046801 sec
+
+ Current Memory Usage: 1460.56 Meg
+
+Thu Oct 25 14:16:43 2018
+

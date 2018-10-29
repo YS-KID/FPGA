@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=C:\VHDL\project_4\project_4.runs\impl_2\kadai7_routed.ncd
+OUTFILE=C:\VHDL\project_4\project_4.runs\impl_2\kadai7.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\VHDL\project_4\project_4.runs\impl_2
+LICENSE=WebPack
+USER_INFO=211013381_0_0_838

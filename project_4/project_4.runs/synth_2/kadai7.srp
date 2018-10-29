@@ -1,0 +1,1250 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: kadai7.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "kadai7.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx16csg324-3
+Output File Name                   : "kadai7.ngc"
+
+---- Source Options
+Top Module Name                    : kadai7
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai3.vhd" into library work
+Parsing entity <kadai3>.
+Parsing architecture <Behavioral> of entity <kadai3>.
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai2.vhd" into library work
+Parsing entity <kadai2>.
+Parsing architecture <Behavioral> of entity <kadai2>.
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" into library work
+Parsing entity <kadai4>.
+Parsing architecture <Behavioral> of entity <kadai4>.
+Parsing VHDL file "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" into library work
+Parsing entity <kadai7>.
+Parsing architecture <Behavioral> of entity <kadai7>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <kadai7> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <kadai4> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <kadai3> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai3.vhd" Line 46: Using initial value "0000000000000000000000001" for count_a since it is never assigned
+
+Elaborating entity <kadai2> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai2.vhd" Line 62. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:871 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 65: Using initial value "01" for count_a since it is never assigned
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 74. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 81. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd" Line 108. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" Line 156: sw should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" Line 153: Net <TIME_H_D[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd" Line 154: Net <TIME_H_U[3]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <kadai7>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/new/kadai7.vhd".
+WARNING:Xst:647 - Input <BTN<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SW<5:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'TIME_H_D', unconnected in block 'kadai7', is tied to its initial value (0100).
+WARNING:Xst:2935 - Signal 'TIME_H_U', unconnected in block 'kadai7', is tied to its initial value (0001).
+    Found 24-bit register for signal <_v28>.
+    Found 1-bit register for signal <CLK_10HZ>.
+    Found 19-bit register for signal <COUNT>.
+    Found 1-bit register for signal <CLK_100HZ>.
+    Found 1-bit register for signal <BTNR_STATE>.
+    Found 4-bit register for signal <COUNT_A>.
+    Found 4-bit register for signal <COUNT_B>.
+    Found 4-bit register for signal <COUNT_C>.
+    Found 4-bit register for signal <COUNT_D>.
+    Found 4-bit register for signal <COUNT_E>.
+    Found 16-bit register for signal <COUNT_E[3]_dff_56_OUT>.
+    Found 4-bit register for signal <GND_4_o_dff_57_OUT>.
+    Found 7-bit register for signal <TIME_COUNT>.
+    Found 4-bit register for signal <TIME_SEC_D>.
+    Found 4-bit register for signal <TIME_SEC_U>.
+    Found 4-bit register for signal <TIME_MIN_D>.
+    Found 4-bit register for signal <TIME_MIN_U>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<15>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<14>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<13>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<12>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<11>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<10>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<9>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<8>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<7>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<6>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<5>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<4>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<3>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<2>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<1>>.
+    Found 1-bit register for signal <SEVENSEG_DATA_l<0>>.
+    Found 1-bit register for signal <DOT_SEL<3>>.
+    Found 1-bit register for signal <DOT_SEL<2>>.
+    Found 1-bit register for signal <DOT_SEL<1>>.
+    Found 1-bit register for signal <DOT_SEL<0>>.
+    Found 24-bit adder for signal <COUNT[23]_GND_4_o_add_4_OUT> created at line 1241.
+    Found 19-bit adder for signal <COUNT[18]_GND_4_o_add_9_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_A[3]_GND_4_o_add_19_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_B[3]_GND_4_o_add_21_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_C[3]_GND_4_o_add_23_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_D[3]_GND_4_o_add_25_OUT> created at line 1241.
+    Found 4-bit adder for signal <COUNT_E[3]_GND_4_o_add_27_OUT> created at line 1241.
+    Found 7-bit adder for signal <TIME_COUNT[6]_GND_4_o_add_58_OUT> created at line 1241.
+    Found 4-bit adder for signal <TIME_SEC_D[3]_GND_4_o_add_60_OUT> created at line 1241.
+    Found 4-bit adder for signal <TIME_SEC_U[3]_GND_4_o_add_62_OUT> created at line 1241.
+    Found 4-bit adder for signal <TIME_MIN_D[3]_GND_4_o_add_64_OUT> created at line 1241.
+    Summary:
+	inferred  11 Adder/Subtractor(s).
+	inferred 129 D-type flip-flop(s).
+	inferred  40 Multiplexer(s).
+Unit <kadai7> synthesized.
+
+Synthesizing Unit <kadai4>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/new/kadai4.vhd".
+    Found 4-bit register for signal <SEG_SEL>.
+    Found 4-bit register for signal <SEG_l>.
+    Found 1-bit register for signal <SEG_DP>.
+    Found 2-bit register for signal <COUNT>.
+    Found 2-bit adder for signal <COUNT[1]_GND_5_o_add_0_OUT> created at line 68.
+    Found 4x4-bit Read Only RAM for signal <COUNT[1]_PWR_5_o_wide_mux_1_OUT>
+    Found 4-bit 4-to-1 multiplexer for signal <COUNT[1]_SEVENSEG_DATA_l[3]_wide_mux_2_OUT> created at line 76.
+    Found 1-bit 4-to-1 multiplexer for signal <COUNT[1]_DOT_SEL[0]_Mux_3_o> created at line 83.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <kadai4> synthesized.
+
+Synthesizing Unit <kadai3>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai3.vhd".
+    Found 1-bit register for signal <CLK_OUT_kadai3>.
+    Found 1-bit register for signal <STATE>.
+    Found 25-bit register for signal <COUNT>.
+    Found 25-bit adder for signal <COUNT[24]_GND_6_o_add_0_OUT> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <kadai3> synthesized.
+
+Synthesizing Unit <kadai2>.
+    Related source file is "C:/VHDL/project_4/project_4.srcs/sources_1/imports/sources_1/imports/new/kadai2.vhd".
+    Found 16x7-bit Read Only RAM for signal <SEG_DATA_kadai2>
+    Summary:
+	inferred   1 RAM(s).
+Unit <kadai2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 13
+ 19-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 7-bit adder                                           : 1
+# Registers                                            : 44
+ 1-bit register                                        : 26
+ 16-bit register                                       : 1
+ 19-bit register                                       : 1
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 25-bit register                                       : 1
+ 4-bit register                                        : 12
+ 7-bit register                                        : 1
+# Multiplexers                                         : 42
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 38
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <kadai2>.
+INFO:Xst:3231 - The small RAM <Mram_SEG_DATA_kadai2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <SW_kadai2>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <SEG_DATA_kadai2> |          |
+    -----------------------------------------------------------------------
+Unit <kadai2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <kadai3>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <kadai3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <kadai4>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+INFO:Xst:3231 - The small RAM <Mram_COUNT[1]_PWR_5_o_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <COUNT[1]_GND_5_o_add_0_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <kadai4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <kadai7>.
+The following registers are absorbed into counter <_i000014>: 1 register on signal <_i000014>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+The following registers are absorbed into counter <TIME_COUNT>: 1 register on signal <TIME_COUNT>.
+Unit <kadai7> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 13
+ 19-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 7-bit adder                                           : 1
+# Counters                                             : 5
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 24-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 90
+ Flip-Flops                                            : 90
+# Multiplexers                                         : 45
+ 1-bit 2-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 37
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <_i000090_0> (without init value) has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_i000090_3> (without init value) has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DOT_SEL_3> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DOT_SEL_0> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    SEVENSEG_DATA_l_0 in unit <kadai7>
+    SEVENSEG_DATA_l_1 in unit <kadai7>
+    SEVENSEG_DATA_l_3 in unit <kadai7>
+    SEVENSEG_DATA_l_4 in unit <kadai7>
+    SEVENSEG_DATA_l_2 in unit <kadai7>
+    SEVENSEG_DATA_l_6 in unit <kadai7>
+    SEVENSEG_DATA_l_7 in unit <kadai7>
+    SEVENSEG_DATA_l_5 in unit <kadai7>
+    SEVENSEG_DATA_l_8 in unit <kadai7>
+    SEVENSEG_DATA_l_9 in unit <kadai7>
+    SEVENSEG_DATA_l_11 in unit <kadai7>
+    SEVENSEG_DATA_l_12 in unit <kadai7>
+    SEVENSEG_DATA_l_10 in unit <kadai7>
+    SEVENSEG_DATA_l_14 in unit <kadai7>
+    SEVENSEG_DATA_l_15 in unit <kadai7>
+    SEVENSEG_DATA_l_13 in unit <kadai7>
+    DOT_SEL_1 in unit <kadai7>
+    DOT_SEL_2 in unit <kadai7>
+
+
+Optimizing unit <kadai7> ...
+WARNING:Xst:1293 - FF/Latch <TIME_MIN_U_1> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <TIME_MIN_U_2> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <TIME_MIN_U_3> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <kadai4> ...
+WARNING:Xst:1293 - FF/Latch <TIME_SEC_U_3> has a constant value of 0 in block <kadai7>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:3203 - The FF/Latch <_i000090_1> in Unit <kadai7> is the opposite to the following FF/Latch, which will be removed : <_i000090_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block kadai7, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 171
+ Flip-Flops                                            : 171
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : kadai7.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 675
+#      GND                         : 2
+#      INV                         : 10
+#      LUT1                        : 130
+#      LUT2                        : 89
+#      LUT3                        : 58
+#      LUT4                        : 15
+#      LUT5                        : 31
+#      LUT6                        : 64
+#      MUXCY                       : 130
+#      MUXF7                       : 8
+#      VCC                         : 2
+#      XORCY                       : 136
+# FlipFlops/Latches                : 189
+#      FD                          : 100
+#      FDC                         : 14
+#      FDE                         : 33
+#      FDP                         : 17
+#      FDRE                        : 7
+#      LDC                         : 14
+#      LDP                         : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 5
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             189  out of  18224     1%  
+ Number of Slice LUTs:                  397  out of   9112     4%  
+    Number used as Logic:               397  out of   9112     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    424
+   Number with an unused Flip Flop:     235  out of    424    55%  
+   Number with an unused LUT:            27  out of    424     6%  
+   Number of fully used LUT-FF pairs:   162  out of    424    38%  
+   Number of unique control sets:        56
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  18  out of    232     7%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                           | Clock buffer(FF name)          | Load  |
+-------------------------------------------------------+--------------------------------+-------+
+CLK_10HZ                                               | NONE(BTNR_STATE)               | 1     |
+CLK_100HZ                                              | BUFG                           | 87    |
+CLK_SRC                                                | BUFGP                          | 72    |
+SW[7]_GND_4_o_AND_50_o(SW[7]_GND_4_o_AND_50_o1:O)      | NONE(*)(DOT_SEL_2_LDC)         | 1     |
+SW[7]_GND_4_o_AND_48_o(SW[7]_GND_4_o_AND_48_o1:O)      | NONE(*)(DOT_SEL_1_LDC)         | 1     |
+SW[7]_COUNT_E[3]_AND_17_o(SW[7]_COUNT_E[3]_AND_17_o1:O)| NONE(*)(SEVENSEG_DATA_l_13_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_13_o(SW[7]_COUNT_E[3]_AND_13_o1:O)| NONE(*)(SEVENSEG_DATA_l_15_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_15_o(SW[7]_COUNT_E[3]_AND_15_o1:O)| NONE(*)(SEVENSEG_DATA_l_14_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_23_o(SW[7]_COUNT_E[3]_AND_23_o1:O)| NONE(*)(SEVENSEG_DATA_l_10_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_19_o(SW[7]_COUNT_E[3]_AND_19_o1:O)| NONE(*)(SEVENSEG_DATA_l_12_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_21_o(SW[7]_COUNT_E[3]_AND_21_o1:O)| NONE(*)(SEVENSEG_DATA_l_11_LDC)| 1     |
+SW[7]_COUNT_E[3]_AND_25_o(SW[7]_COUNT_E[3]_AND_25_o1:O)| NONE(*)(SEVENSEG_DATA_l_9_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_28_o(SW[7]_COUNT_E[3]_AND_28_o1:O)| NONE(*)(SEVENSEG_DATA_l_8_LDC1)| 1     |
+SW[7]_COUNT_E[3]_AND_34_o(SW[7]_COUNT_E[3]_AND_34_o1:O)| NONE(*)(SEVENSEG_DATA_l_5_LDC1)| 1     |
+SW[7]_COUNT_E[3]_AND_29_o(SW[7]_COUNT_E[3]_AND_29_o1:O)| NONE(*)(SEVENSEG_DATA_l_7_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_31_o(SW[7]_COUNT_E[3]_AND_31_o1:O)| NONE(*)(SEVENSEG_DATA_l_6_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_39_o(SW[7]_COUNT_E[3]_AND_39_o1:O)| NONE(*)(SEVENSEG_DATA_l_2_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_35_o(SW[7]_COUNT_E[3]_AND_35_o1:O)| NONE(*)(SEVENSEG_DATA_l_4_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_37_o(SW[7]_COUNT_E[3]_AND_37_o1:O)| NONE(*)(SEVENSEG_DATA_l_3_LDC) | 1     |
+SW[7]_COUNT_E[3]_AND_42_o(SW[7]_COUNT_E[3]_AND_42_o1:O)| NONE(*)(SEVENSEG_DATA_l_1_LDC1)| 1     |
+SW[7]_COUNT_E[3]_AND_44_o(SW[7]_COUNT_E[3]_AND_44_o1:O)| NONE(*)(SEVENSEG_DATA_l_0_LDC1)| 1     |
+UA/U1/CLK_OUT_kadai3                                   | NONE(UA/COUNT_1)               | 11    |
+-------------------------------------------------------+--------------------------------+-------+
+(*) These 18 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.244ns (Maximum Frequency: 190.701MHz)
+   Minimum input arrival time before clock: 6.500ns
+   Maximum output required time after clock: 4.821ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_10HZ'
+  Clock period: 2.216ns (frequency: 451.233MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.216ns (Levels of Logic = 1)
+  Source:            BTNR_STATE (FF)
+  Destination:       BTNR_STATE (FF)
+  Source Clock:      CLK_10HZ rising
+  Destination Clock: CLK_10HZ rising
+
+  Data Path: BTNR_STATE to BTNR_STATE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.447   0.882  BTNR_STATE (BTNR_STATE)
+     INV:I->O              1   0.206   0.579  BTNR_STATE_INV_25_o1_INV_0 (BTNR_STATE_INV_25_o)
+     FDE:D                     0.102          BTNR_STATE
+    ----------------------------------------
+    Total                      2.216ns (0.755ns logic, 1.461ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_100HZ'
+  Clock period: 4.807ns (frequency: 208.036MHz)
+  Total number of paths / destination ports: 1419 / 119
+-------------------------------------------------------------------------
+Delay:               4.807ns (Levels of Logic = 4)
+  Source:            COUNT_A_1 (FF)
+  Destination:       _i000088_12 (FF)
+  Source Clock:      CLK_100HZ rising
+  Destination Clock: CLK_100HZ rising
+
+  Data Path: COUNT_A_1 to _i000088_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.447   0.943  COUNT_A_1 (COUNT_A_1)
+     LUT6:I3->O            3   0.205   0.651  Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT1411 (Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT141)
+     LUT6:I5->O           30   0.205   1.264  Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT1811 (Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT181)
+     LUT6:I5->O            1   0.205   0.580  Mmux_COUNT_E[3]_COUNT_D[3]_mux_49_OUT41_SW2 (N86)
+     LUT6:I5->O            1   0.205   0.000  Mmux_COUNT_E[3]_COUNT_D[3]_mux_49_OUT41 (COUNT_E[3]_COUNT_D[3]_mux_49_OUT<12>)
+     FD:D                      0.102          _i000088_12
+    ----------------------------------------
+    Total                      4.807ns (1.369ns logic, 3.438ns route)
+                                       (28.5% logic, 71.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_SRC'
+  Clock period: 5.244ns (frequency: 190.701MHz)
+  Total number of paths / destination ports: 20895 / 72
+-------------------------------------------------------------------------
+Delay:               5.244ns (Levels of Logic = 15)
+  Source:            _i000014_0 (FF)
+  Destination:       _i000014_0 (FF)
+  Source Clock:      CLK_SRC rising
+  Destination Clock: CLK_SRC rising
+
+  Data Path: _i000014_0 to _i000014_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  _i000014_0 (_i000014_0)
+     INV:I->O              1   0.206   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_lut<0>_INV_0 (Madd_COUNT[23]_GND_4_o_add_4_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<0> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<1> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<2> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<3> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<4> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<5> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<6> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<7> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<8> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<9> (Madd_COUNT[23]_GND_4_o_add_4_OUT_cy<9>)
+     XORCY:CI->O           1   0.180   0.924  Madd_COUNT[23]_GND_4_o_add_4_OUT_xor<10> (COUNT[23]_GND_4_o_add_4_OUT<10>)
+     LUT5:I0->O            3   0.203   0.879  COUNT[23]_GND_4_o_equal_6_o<23>4 (COUNT[23]_GND_4_o_equal_6_o<23>3)
+     LUT6:I3->O           13   0.205   0.933  COUNT[23]_GND_4_o_equal_6_o<23>7 (COUNT[23]_GND_4_o_equal_6_o)
+     LUT2:I1->O            1   0.205   0.000  _i000014_0_rstpot (_i000014_0_rstpot)
+     FD:D                      0.102          _i000014_0
+    ----------------------------------------
+    Total                      5.244ns (1.891ns logic, 3.353ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'UA/U1/CLK_OUT_kadai3'
+  Clock period: 2.839ns (frequency: 352.243MHz)
+  Total number of paths / destination ports: 24 / 11
+-------------------------------------------------------------------------
+Delay:               2.839ns (Levels of Logic = 2)
+  Source:            UA/COUNT_0 (FF)
+  Destination:       UA/SEG_l_2 (FF)
+  Source Clock:      UA/U1/CLK_OUT_kadai3 rising
+  Destination Clock: UA/U1/CLK_OUT_kadai3 rising
+
+  Data Path: UA/COUNT_0 to UA/SEG_l_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              14   0.447   1.302  COUNT_0 (COUNT_0)
+     LUT5:I0->O            1   0.203   0.580  Mmux_COUNT[1]_SEVENSEG_DATA_l[3]_wide_mux_2_OUT31_SW0 (N90)
+     LUT6:I5->O            1   0.205   0.000  Mmux_COUNT[1]_SEVENSEG_DATA_l[3]_wide_mux_2_OUT31 (COUNT[1]_SEVENSEG_DATA_l[3]_wide_mux_2_OUT<2>)
+     FD:D                      0.102          SEG_l_2
+    ----------------------------------------
+    Total                      2.839ns (0.957ns logic, 1.882ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_10HZ'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.123ns (Levels of Logic = 1)
+  Source:            BTN<3> (PAD)
+  Destination:       BTNR_STATE (FF)
+  Destination Clock: CLK_10HZ rising
+
+  Data Path: BTN<3> to BTNR_STATE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  BTN_3_IBUF (BTN_3_IBUF)
+     FDE:CE                    0.322          BTNR_STATE
+    ----------------------------------------
+    Total                      2.123ns (1.544ns logic, 0.579ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_100HZ'
+  Total number of paths / destination ports: 371 / 140
+-------------------------------------------------------------------------
+Offset:              6.500ns (Levels of Logic = 5)
+  Source:            BTN<0> (PAD)
+  Destination:       _i000088_12 (FF)
+  Destination Clock: CLK_100HZ rising
+
+  Data Path: BTN<0> to _i000088_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            48   1.222   1.864  BTN_0_IBUF (BTN_0_IBUF)
+     LUT6:I1->O            3   0.203   0.651  Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT1411 (Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT141)
+     LUT6:I5->O           30   0.205   1.264  Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT1811 (Mmux_COUNT_A[3]_COUNT_A[3]_mux_44_OUT181)
+     LUT6:I5->O            1   0.205   0.580  Mmux_COUNT_E[3]_COUNT_D[3]_mux_49_OUT41_SW2 (N86)
+     LUT6:I5->O            1   0.205   0.000  Mmux_COUNT_E[3]_COUNT_D[3]_mux_49_OUT41 (COUNT_E[3]_COUNT_D[3]_mux_49_OUT<12>)
+     FD:D                      0.102          _i000088_12
+    ----------------------------------------
+    Total                      6.500ns (2.142ns logic, 4.358ns route)
+                                       (33.0% logic, 67.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_GND_4_o_AND_50_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.005ns (Levels of Logic = 2)
+  Source:            SW<6> (PAD)
+  Destination:       DOT_SEL_2_LDC (LATCH)
+  Destination Clock: SW[7]_GND_4_o_AND_50_o falling
+
+  Data Path: SW<6> to DOT_SEL_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.467  SW_6_IBUF (SW_6_IBUF)
+     LUT3:I1->O            4   0.203   0.683  SW[7]_GND_4_o_AND_48_o1 (SW[7]_GND_4_o_AND_48_o)
+     LDC:CLR                   0.430          DOT_SEL_2_LDC
+    ----------------------------------------
+    Total                      4.005ns (1.855ns logic, 2.150ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_GND_4_o_AND_48_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       DOT_SEL_1_LDC (LATCH)
+  Destination Clock: SW[7]_GND_4_o_AND_48_o falling
+
+  Data Path: SW<7> to DOT_SEL_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_GND_4_o_AND_50_o1 (SW[7]_GND_4_o_AND_50_o)
+     LDC:CLR                   0.430          DOT_SEL_1_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_17_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.027ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_13_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_17_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            1   0.205   0.579  SW[7]_COUNT_E[3]_AND_18_o1 (SW[7]_COUNT_E[3]_AND_18_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_13_LDC
+    ----------------------------------------
+    Total                      4.027ns (1.857ns logic, 2.170ns route)
+                                       (46.1% logic, 53.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_13_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.027ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_15_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_13_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            1   0.205   0.579  SW[7]_COUNT_E[3]_AND_14_o1 (SW[7]_COUNT_E[3]_AND_14_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_15_LDC
+    ----------------------------------------
+    Total                      4.027ns (1.857ns logic, 2.170ns route)
+                                       (46.1% logic, 53.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_15_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.027ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_14_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_15_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            1   0.205   0.579  SW[7]_COUNT_E[3]_AND_16_o1 (SW[7]_COUNT_E[3]_AND_16_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_14_LDC
+    ----------------------------------------
+    Total                      4.027ns (1.857ns logic, 2.170ns route)
+                                       (46.1% logic, 53.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_23_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_10_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_23_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_24_o1 (SW[7]_COUNT_E[3]_AND_24_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_10_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_19_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_12_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_19_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_20_o1 (SW[7]_COUNT_E[3]_AND_20_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_12_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_21_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_11_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_21_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_22_o1 (SW[7]_COUNT_E[3]_AND_22_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_11_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_25_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_9_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_25_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_26_o1 (SW[7]_COUNT_E[3]_AND_26_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_9_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_28_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              3.938ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_8_LDC1 (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_28_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_8_LDC1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.467  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I1->O            2   0.203   0.616  SW[7]_COUNT_E[3]_AND_27_o1 (SEVENSEG_DATA_l_8_LDC)
+     LDP:PRE                   0.430          SEVENSEG_DATA_l_8_LDC1
+    ----------------------------------------
+    Total                      3.938ns (1.855ns logic, 2.083ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_34_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              3.938ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_5_LDC1 (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_34_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_5_LDC1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.467  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I1->O            2   0.203   0.616  SW[7]_COUNT_E[3]_AND_33_o1 (SEVENSEG_DATA_l_5_LDC)
+     LDP:PRE                   0.430          SEVENSEG_DATA_l_5_LDC1
+    ----------------------------------------
+    Total                      3.938ns (1.855ns logic, 2.083ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_29_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_7_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_29_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_30_o1 (SW[7]_COUNT_E[3]_AND_30_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_7_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_31_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_6_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_31_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_32_o1 (SW[7]_COUNT_E[3]_AND_32_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_6_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_39_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_2_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_39_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_40_o1 (SW[7]_COUNT_E[3]_AND_40_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_2_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_35_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_4_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_35_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_36_o1 (SW[7]_COUNT_E[3]_AND_36_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_4_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_37_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.064ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_3_LDC (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_37_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.591  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I0->O            2   0.205   0.616  SW[7]_COUNT_E[3]_AND_38_o1 (SW[7]_COUNT_E[3]_AND_38_o)
+     LDC:CLR                   0.430          SEVENSEG_DATA_l_3_LDC
+    ----------------------------------------
+    Total                      4.064ns (1.857ns logic, 2.207ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_42_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              3.938ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_1_LDC1 (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_42_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_1_LDC1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.467  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I1->O            2   0.203   0.616  SW[7]_COUNT_E[3]_AND_41_o1 (SEVENSEG_DATA_l_1_LDC)
+     LDP:PRE                   0.430          SEVENSEG_DATA_l_1_LDC1
+    ----------------------------------------
+    Total                      3.938ns (1.855ns logic, 2.083ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SW[7]_COUNT_E[3]_AND_44_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              3.938ns (Levels of Logic = 2)
+  Source:            SW<7> (PAD)
+  Destination:       SEVENSEG_DATA_l_0_LDC1 (LATCH)
+  Destination Clock: SW[7]_COUNT_E[3]_AND_44_o falling
+
+  Data Path: SW<7> to SEVENSEG_DATA_l_0_LDC1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            37   1.222   1.467  SW_7_IBUF (SW_7_IBUF)
+     LUT3:I1->O            2   0.203   0.616  SW[7]_COUNT_E[3]_AND_43_o1 (SEVENSEG_DATA_l_0_LDC)
+     LDP:PRE                   0.430          SEVENSEG_DATA_l_0_LDC1
+    ----------------------------------------
+    Total                      3.938ns (1.855ns logic, 2.083ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'UA/U1/CLK_OUT_kadai3'
+  Total number of paths / destination ports: 33 / 12
+-------------------------------------------------------------------------
+Offset:              4.821ns (Levels of Logic = 3)
+  Source:            UA/SEG_l_1 (FF)
+  Destination:       SEG_DATA<6> (PAD)
+  Source Clock:      UA/U1/CLK_OUT_kadai3 rising
+
+  Data Path: UA/SEG_l_1 to SEG_DATA<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   1.021  SEG_l_1 (SEG_l_1)
+     LUT4:I0->O            1   0.203   0.579  SEG_DATA<3>1 (SEG_DATA<3>)
+     end scope: 'UA:SEG_DATA<3>'
+     OBUF:I->O                 2.571          SEG_DATA_3_OBUF (SEG_DATA<3>)
+    ----------------------------------------
+    Total                      4.821ns (3.221ns logic, 1.600ns route)
+                                       (66.8% logic, 33.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_100HZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |    4.807|         |         |         |
+CLK_10HZ       |    5.109|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK_10HZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_10HZ       |    2.216|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK_SRC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_SRC        |    5.244|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_13_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.278|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_15_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.278|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_17_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.278|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_19_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_21_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_23_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_25_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_28_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.544|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_29_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_31_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_34_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.544|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_35_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_37_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_39_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_42_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.544|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_COUNT_E[3]_AND_44_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.544|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_GND_4_o_AND_48_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SW[7]_GND_4_o_AND_50_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100HZ      |         |         |    2.610|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock UA/U1/CLK_OUT_kadai3
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+CLK_100HZ                |    3.006|         |         |         |
+SW[7]_COUNT_E[3]_AND_13_o|         |    1.627|         |         |
+SW[7]_COUNT_E[3]_AND_15_o|         |    1.727|         |         |
+SW[7]_COUNT_E[3]_AND_17_o|         |    1.727|         |         |
+SW[7]_COUNT_E[3]_AND_19_o|         |    2.626|         |         |
+SW[7]_COUNT_E[3]_AND_21_o|         |    2.529|         |         |
+SW[7]_COUNT_E[3]_AND_23_o|         |    3.183|         |         |
+SW[7]_COUNT_E[3]_AND_25_o|         |    3.183|         |         |
+SW[7]_COUNT_E[3]_AND_28_o|         |    2.398|         |         |
+SW[7]_COUNT_E[3]_AND_29_o|         |    1.761|         |         |
+SW[7]_COUNT_E[3]_AND_31_o|         |    2.415|         |         |
+SW[7]_COUNT_E[3]_AND_34_o|         |    2.415|         |         |
+SW[7]_COUNT_E[3]_AND_35_o|         |    2.643|         |         |
+SW[7]_COUNT_E[3]_AND_37_o|         |    1.867|         |         |
+SW[7]_COUNT_E[3]_AND_39_o|         |    2.500|         |         |
+SW[7]_COUNT_E[3]_AND_42_o|         |    2.500|         |         |
+SW[7]_COUNT_E[3]_AND_44_o|         |    2.500|         |         |
+SW[7]_GND_4_o_AND_48_o   |         |    1.630|         |         |
+SW[7]_GND_4_o_AND_50_o   |         |    1.487|         |         |
+UA/U1/CLK_OUT_kadai3     |    2.839|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.52 secs
+ 
+--> 
+
+Total memory usage is 316056 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

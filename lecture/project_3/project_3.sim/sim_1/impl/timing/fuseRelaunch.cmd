@@ -1,0 +1,1 @@
+-intstyle "pa" -incremental -L "work" -L "secureip" -o "kadai56.exe" --prj "C:/VHDL/project_3/project_3.sim/sim_1/impl/timing/kadai56.prj" -top "work.kadai56" 

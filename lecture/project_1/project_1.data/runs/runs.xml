@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="8">
+	<Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc6slx16csg324-3" LaunchPart="xc6slx16csg324-3" ConstrsSet="constrs_1" Description="PlanAhead Defaults (XST defaults with hierarchy)" Dir="$PRUNDIR/synth_1" LaunchTime="1540269734">
+		<File Type="XST-NGC" Name="test01.ngc"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+		<File Type="XST-SRP" Name="test01.srp"/>
+		<File Type="PA-XST" Name="test01.xst"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+		<File Type="PA-XSTPRJ" Name="test01.prj"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+	</Run>
+	<Run Id="synth_2" Type="Ft3:Synth" SrcSet="sources_1" Part="xc6slx16csg324-3" LaunchPart="xc6slx16csg324-3" ConstrsSet="kadai1" Description="PlanAhead Defaults (XST defaults with hierarchy)" Dir="$PRUNDIR/synth_2" LaunchTime="1540274961">
+		<File Type="XST-NGC" Name="kadai1.ngc"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_2/synth_2.psg"/>
+		<File Type="XST-SRP" Name="kadai1.srp"/>
+		<File Type="PA-XST" Name="kadai1.xst"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_2/sources.xml"/>
+		<File Type="PA-XSTPRJ" Name="kadai1.prj"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_2/constrs_in.xml"/>
+	</Run>
+	<Run Id="synth_3" Type="Ft3:Synth" SrcSet="sources_1" Part="xc6slx16csg324-3" LaunchPart="xc6slx16csg324-3" ConstrsSet="kadai1" Description="PlanAhead Defaults (XST defaults with hierarchy)" Dir="$PRUNDIR/synth_3" LaunchTime="1540275055">
+		<File Type="XST-NGC" Name="kadai1.ngc"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_3/synth_3.psg"/>
+		<File Type="XST-SRP" Name="kadai1.srp"/>
+		<File Type="PA-XST" Name="kadai1.xst"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_3/sources.xml"/>
+		<File Type="PA-XSTPRJ" Name="kadai1.prj"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_3/constrs_in.xml"/>
+	</Run>
+	<Run Id="synth_4" Type="Ft3:Synth" SrcSet="sources_1" Part="xc6slx16csg324-3" LaunchPart="xc6slx16csg324-3" ConstrsSet="kadai1" Description="PlanAhead Defaults (XST defaults with hierarchy)" State="current" Dir="$PRUNDIR/synth_4" LaunchTime="1540445192">
+		<File Type="XST-NGC" Name="kadai3.ngc"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_4/synth_4.psg"/>
+		<File Type="XST-SRP" Name="kadai3.srp"/>
+		<File Type="PA-XST" Name="kadai3.xst"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_4/sources.xml"/>
+		<File Type="PA-XSTPRJ" Name="kadai3.prj"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_4/constrs_in.xml"/>
+	</Run>
+	<Run Id="impl_1" Type="Ft2:EntireDesign" SynthRun="synth_1" Part="xc6slx16csg324-3" ConstrsSet="constrs_1" Description="ISE Defaults, including packing registers in IOs off"/>
+	<Run Id="impl_2" Type="Ft2:EntireDesign" SynthRun="synth_2" Part="xc6slx16csg324-3" ConstrsSet="kadai1" Description="ISE Defaults, including packing registers in IOs off"/>
+	<Run Id="impl_3" Type="Ft2:EntireDesign" SynthRun="synth_3" Part="xc6slx16csg324-3" LaunchPart="xc6slx16csg324-3" ConstrsSet="kadai1" Description="ISE Defaults, including packing registers in IOs off" Dir="$PRUNDIR/impl_3" LaunchTime="1540275084">
+		<File Type="MAP-PSR" Name="kadai1.psr"/>
+		<File Type="PA-EDIF" Name="kadai1.edf"/>
+		<File Type="PAR-NCD" Name="kadai1_routed.ncd"/>
+		<File Type="PA-UCF" Name="kadai1.ucf"/>
+		<File Type="PAR-PAD" Name="kadai1_routed_pad.txt"/>
+		<File Type="PAR-PAR" Name="kadai1_routed.par"/>
+		<File Type="PAR-UNR" Name="kadai1_routed.unroutes"/>
+		<File Type="BG-BIT" Name="kadai1.bit"/>
+		<File Type="BG-DRC" Name="kadai1.drc"/>
+		<File Type="PA-CONSTRSDIR" Name=".constrs"/>
+		<File Type="BG-BGN" Name="kadai1.bgn"/>
+		<File Type="TRCE-TWR" Name="kadai1.twr"/>
+		<File Type="TRCE-TWX" Name="kadai1.twx"/>
+		<File Type="XDL-XDL" Name="kadai1_routed.xdl"/>
+		<File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+		<File Type="WBT-LOG" Name="webtalk.log"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_3/constrs_in.xml"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_3/impl_3.psg"/>
+		<File Type="NGDB-NGD" Name="kadai1.ngd"/>
+		<File Type="NGDB-BLD" Name="kadai1.bld"/>
+		<File Type="MAP-NCD" Name="kadai1.ncd"/>
+		<File Type="MAP-PCF" Name="kadai1.pcf"/>
+		<File Type="MAP-MRP" Name="kadai1.mrp"/>
+		<File Type="MAP-MAP" Name="kadai1.map"/>
+	</Run>
+	<Run Id="impl_4" Type="Ft2:EntireDesign" SynthRun="synth_4" Part="xc6slx16csg324-3" LaunchPart="xc6slx16csg324-3" ConstrsSet="kadai1" Description="ISE Defaults, including packing registers in IOs off" State="current" Dir="$PRUNDIR/impl_4" LaunchTime="1540445250">
+		<File Type="PA-EDIF" Name="kadai3.edf"/>
+		<File Type="MAP-PSR" Name="kadai3.psr"/>
+		<File Type="PA-UCF" Name="kadai3.ucf"/>
+		<File Type="PAR-NCD" Name="kadai3_routed.ncd"/>
+		<File Type="PAR-PAD" Name="kadai3_routed_pad.txt"/>
+		<File Type="PAR-PAR" Name="kadai3_routed.par"/>
+		<File Type="PAR-UNR" Name="kadai3_routed.unroutes"/>
+		<File Type="BG-BIT" Name="kadai3.bit"/>
+		<File Type="BG-DRC" Name="kadai3.drc"/>
+		<File Type="PA-CONSTRSDIR" Name=".constrs"/>
+		<File Type="BG-BGN" Name="kadai3.bgn"/>
+		<File Type="TRCE-TWR" Name="kadai3.twr"/>
+		<File Type="TRCE-TWX" Name="kadai3.twx"/>
+		<File Type="XDL-XDL" Name="kadai3_routed.xdl"/>
+		<File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+		<File Type="WBT-LOG" Name="webtalk.log"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_4/constrs_in.xml"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_4/impl_4.psg"/>
+		<File Type="NGDB-NGD" Name="kadai3.ngd"/>
+		<File Type="NGDB-BLD" Name="kadai3.bld"/>
+		<File Type="MAP-NCD" Name="kadai3.ncd"/>
+		<File Type="MAP-PCF" Name="kadai3.pcf"/>
+		<File Type="MAP-MRP" Name="kadai3.mrp"/>
+		<File Type="MAP-MAP" Name="kadai3.map"/>
+	</Run>
+</Runs>
+

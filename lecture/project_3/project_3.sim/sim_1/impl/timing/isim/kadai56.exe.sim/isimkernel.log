@@ -1,0 +1,31 @@
+Command line:
+   kadai56.exe
+     -simmode  gui
+     -sdfmax  /uut/=C:/VHDL/project_3/project_3.sim/sim_1/impl/timing/kadai56_time_impl.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  52314
+
+Thu Oct 25 13:46:56 2018
+
+
+ Elaboration Time: 0.078001 sec
+
+ Current Memory Usage: 1146.21 Meg
+
+ Total Signals          : 285
+ Total Nets             : 194
+ Total Signal Drivers   : 158
+ Total Blocks           : 59
+ Total Primitive Blocks : 36
+ Total Processes        : 158
+ Total Traceable Variables  : 432
+ Total Scalar Nets and Variables : 5948
+Total Line Count : 485
+
+ Total Simulation Time: 0.171601 sec
+
+ Current Memory Usage: 1146.21 Meg
+
+Thu Oct 25 13:50:05 2018
+
